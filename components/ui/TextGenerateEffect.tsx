@@ -34,7 +34,7 @@ export const TextGenerateEffect = ({
               key={word + idx}
             
               //   Change the number 3 later if needed
-              className={`${idx > 3 ? 'text-purple' : 'dark:text-white text-black'}  opacity-0`}
+              className={`${idx > 4 ? 'text-violet-400' : 'dark:text-white text-black'}  opacity-0`}
             >
               {word}{" "}
             </motion.span>
