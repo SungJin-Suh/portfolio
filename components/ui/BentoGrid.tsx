@@ -2,7 +2,6 @@
 
 import { cn } from "@/utils/cn";
 import { BackgroundGradientAnimation } from "./GradientBg";
-import { GlobeDemo } from "./GridGlobe";
 import Lottie from "react-lottie";
 import { useState } from "react";
 import animationData from "@/data/confetti.json";
@@ -19,7 +18,7 @@ export const BentoGrid = ({
   return (
     <div
       className={cn(
-        "grid md:auto-rows-[18rem] grid-cols-1 md:grid-cols-3 gap-4 max-w-7xl mx-auto ",
+        "grid md:auto-rows-[12rem] grid-cols-1 md:grid-cols-3 gap-4 max-w-7xl mx-auto ",
         className
       )}
     >
@@ -31,7 +30,6 @@ export const BentoGrid = ({
 export const BentoGridItem = ({
   className,
   title,
-  description,
   id,
   img,
   imgClassName,
@@ -59,7 +57,8 @@ export const BentoGridItem = ({
     <div
       className={cn(
         "row-span-1 relative overflow-hidden rounded-3xl group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none flex flex-col items-center justify-center space-y-4 border border-white/[0.1]",
-        className
+        className,
+        "h-48"
       )}
       style={{
         background: "rgb(4, 7, 29)",
@@ -97,18 +96,19 @@ export const BentoGridItem = ({
       <div
         className={cn(
           titleClassName,
-          "group-hover/bento:translate-x-2 transition duration-200 relative md:h-full min-h-40 flex flex-col items-center justify-center px-5 p-5 lg-p-10"
+          "group-hover/bento:translate-x-2 transition duration-200 absolute top-0 w-full px-5 p-5 lg-p-10"
         )}
       >
-        <div className="font-sans font-extralight text-[#c1c2d3] text-sm md:text-xs lg:text-base z-10 text-center">
+        {/* <div className="font-sans font-extralight text-[#c1c2d3] text-sm md:text-xs lg:text-base z-10 text-center">
           {description}
+        </div> */}
+        <div className="w-full flex justify-center items-start">
+          <div className="font-sans font-bold text-lg lg:text-3xl max-w-96 z-10 text-center">
+            {title}
+          </div>
         </div>
 
-        <div className="font-sans font-bold text-lg lg:text-3xl max-w-96 z-10 text-center">
-          {title}
-        </div>
-
-        {id === 2 && <GlobeDemo />}
+        {/* {id === 2 && <GlobeDemo />} */}
 
         {id === 3 && (
           <div className="flex gap-1 lg:gap-5 w-fit absolute -right-3 lg:-right-2">
