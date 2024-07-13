@@ -8,13 +8,22 @@ export const navItems = [
 export const gridItems = [
   {
     id: 1,
-    title: "About Me",
-    description: "",
-    className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh]",
+    title: "Hello, World!",
+    description: `After several years of teaching mathematics to diverse student groups, 
+    I decided to pursue my passion for computing. 
+    I am now a co-op studnet in the Computer System Technology (CST) program at BCIT, 
+    where I am learning various programming languages and web development.
+    My favourite part of programming is collaborating with others to solve complex problems, 
+    and I am always looking for opportunities to learn and grow.
+    I am currently seeking a co-op position for the winter of 2025.
+    In my free time, I enjoy watching movies and playing minesweeper 💣. 
+    I also enjoy playing bass guitar 🎸 and listening to rock music 🎧.`,
+    className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh] leading-10",
     imgClassName: "w-full h-full",
     titleClassName: "justify-end",
     img: "/grid.svg",
     spareImg: "",
+    descriptionClassName: "leading-10"
   },
   {
     id: 2,

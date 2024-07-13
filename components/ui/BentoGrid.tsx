@@ -30,11 +30,13 @@ export const BentoGrid = ({
 export const BentoGridItem = ({
   className,
   title,
+  description,
   id,
   img,
   imgClassName,
   titleClassName,
   spareImg,
+  descriptionClassName,
 }: {
   className?: string;
   title?: string | React.ReactNode;
@@ -44,6 +46,7 @@ export const BentoGridItem = ({
   imgClassName?: string;
   titleClassName?: string;
   spareImg?: string;
+  descriptionClassName?: string;
 }) => {
   const [copied, setCopied] = useState(false);
 
@@ -96,16 +99,18 @@ export const BentoGridItem = ({
       <div
         className={cn(
           titleClassName,
-          "group-hover/bento:translate-x-2 transition duration-200 absolute top-0 w-full px-5 p-5 lg-p-10"
+          "absolute top-0 w-[85%] px-5 p-5 lg-p-10"
         )}
       >
-        {/* <div className="font-sans font-extralight text-[#c1c2d3] text-sm md:text-xs lg:text-base z-10 text-center">
-          {description}
-        </div> */}
         <div className="w-full flex justify-center items-start">
-          <div className="font-sans font-bold text-lg lg:text-3xl max-w-96 z-10 text-center">
+          <div className="font-sans font-bold text-lg lg:text-5xl max-w-96 z-10 text-center">
             {title}
           </div>
+        </div>
+        <div className={cn("font-sans text-[#c1c2d3] text-sm md:text-xs lg:text-lg z-10 px-10 py-10", descriptionClassName)}
+        style={{ lineHeight: '2.5' }}
+        >
+          {description}
         </div>
 
         {/* {id === 2 && <GlobeDemo />} */}
