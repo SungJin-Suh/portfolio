@@ -116,12 +116,12 @@ export const BentoGridItem = ({
         {/* {id === 2 && <GlobeDemo />} */}
 
         {id === 3 && (
-          <div className="flex gap-1 lg:gap-5 w-fit absolute -right-3 lg:-right-2">
+          <div className="flex flex-wrap gap-1 lg:gap-5 justify-center">
             <div className="flex flex-col gap-3 lg:gap-8">
-              {["Python", "Java", "C", "JavaScript", "TypeScript"].map((item) => (
+              {["Python", "Java", "C", "JavaScript"].map((item) => (
                 <span
                   key={item}
-                  className="py-2 lg:py-4 lg:px-3 px-3 text-xs lg:text-base opacity-50 lg-opacity-100 rounded-lg text-center bg-[#10132E]"
+                  className="py-2 lg:py-4 lg:px-3 px-3 text-xs lg:text-base opacity-50 lg-opacity-100 rounded-lg text-center bg-[#192167]"
                 >
                   {item}
                 </span>
@@ -130,30 +130,58 @@ export const BentoGridItem = ({
             </div>
 
             <div className="flex flex-col gap-3 lg:gap-8">
-              <span className="py-4 px-3 rounded-lg text-center bg-[#10132E]" />
-              {[
-                "HTML",
-                "CSS",
-                "TypeScript",
-                "React",
-                "Next.js",
-                "Node.js",
-                "Tailwind",
-                "Bootstrap",
-                "MongoDB",
-                "Microsoft Access",
-                "Microsoft SQL Server",
-                "IBM DB2",
-                "MySQL",
-                "SQLite",
-                "Firebase",
-                "Express",
-                "Web API",
-                "Git & GitHub",
-              ].map((item) => (
+              {["TypeScript", "HTML", "CSS", "Tailwind"].map((item) => (
                 <span
                   key={item}
-                  className="py-2 lg:py-4 lg:px-3 px-3 text-xs lg:text-base opacity-50 lg-opacity-100 rounded-lg text-center bg-[#10132E]"
+                  className="py-2 lg:py-4 lg:px-3 px-3 text-xs lg:text-base opacity-50 lg-opacity-100 rounded-lg text-center bg-[#192167]"
+                >
+                  {item}
+                </span>
+              ))}
+              <span className="py-4 px-3 rounded-lg text-center bg-[#10132E]" />
+            </div>
+
+            <div className="flex flex-col gap-3 lg:gap-8">
+              {["Bootstrap", "React", "Next.js", "Node.js"].map((item) => (
+                <span
+                  key={item}
+                  className="py-2 lg:py-4 lg:px-3 px-3 text-xs lg:text-base opacity-50 lg-opacity-100 rounded-lg text-center bg-[#192167]"
+                >
+                  {item}
+                </span>
+              ))}
+              <span className="py-4 px-3 rounded-lg text-center bg-[#10132E]" />
+            </div>
+
+            <div className="flex flex-col gap-3 lg:gap-8">
+              {["MongoDB", "Microsoft Access", "Microsoft SQL Server", "IBM DB2"].map((item) => (
+                <span
+                  key={item}
+                  className="py-2 lg:py-4 lg:px-3 px-3 text-xs lg:text-base opacity-50 lg-opacity-100 rounded-lg text-center bg-[#192167]"
+                >
+                  {item}
+                </span>
+              ))}
+              <span className="py-4 px-3 rounded-lg text-center bg-[#10132E]" />
+            </div>
+
+            <div className="flex flex-col gap-3 lg:gap-8">
+              {["MySQL", "SQLite", "Firebase", "Express"].map((item) => (
+                <span
+                  key={item}
+                  className="py-2 lg:py-4 lg:px-3 px-3 text-xs lg:text-base opacity-50 lg-opacity-100 rounded-lg text-center bg-[#192167]"
+                >
+                  {item}
+                </span>
+              ))}
+              <span className="py-4 px-3 rounded-lg text-center bg-[#10132E]" />
+            </div>
+
+            <div className="flex flex-col gap-3 lg:gap-8">
+              {["Web API", "Git & GitHub"].map((item) => (
+                <span
+                  key={item}
+                  className="py-2 lg:py-4 lg:px-3 px-3 text-xs lg:text-base opacity-50 lg-opacity-100 rounded-lg text-center bg-[#192167]"
                 >
                   {item}
                 </span>
