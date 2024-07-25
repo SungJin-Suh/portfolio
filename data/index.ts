@@ -49,7 +49,7 @@ export const gridItems = [
     id: 4,
     title: "Education",
     description: "",
-    className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh]",
+    className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[75vh]",
     imgClassName: "w-full h-full",
     titleClassName: "justify-start",
     img: "/grid.svg",

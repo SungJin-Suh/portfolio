@@ -4,9 +4,138 @@ import { cn } from "@/utils/cn";
 import { BackgroundGradientAnimation } from "./GradientBg";
 import Lottie from "react-lottie";
 import { useState } from "react";
+import React from "react";
 import animationData from "@/data/confetti.json";
 import MagicButton from "./MagicButton";
 import { IoCopyOutline } from "react-icons/io5";
+import { FaGraduationCap, FaBriefcase } from 'react-icons/fa';
+
+const EducationTimeline = () => {
+  const events = [
+    {
+      date: "2024-",
+      title: "British Columbia Institute Of Technology",
+      location: "Vancouver, BC",
+      description: "Studying passionately to become a programmer by working hard to learn and practicing regularly.",
+      icon: <FaGraduationCap />,
+    },
+    {
+      date: "2019 - 2020",
+      title: "The University Of British Columbia",
+      location: "Vancouver, BC",
+      description: "Graduated with a Bachelor's degree in Education with a specilization in secondary mathematics.",
+      icon: <FaGraduationCap />,
+    },
+    {
+      date: "2012 - 2019",
+      title: "The University Of British Columbia",
+      location: "Vancouver, BC",
+      description: "Graduated with a Bachelor's degree in Science with a combined major in chemistry, life science, and mathematics.",
+      icon: <FaGraduationCap />,
+    },
+  ];
+
+  return (
+    <>
+      <style jsx>{`
+        .timeline-container {
+          padding: 20px;
+          position: relative;
+          margin-left: 20px;
+        }
+
+        .timeline-event {
+          position: relative;
+          margin-bottom: 20px;
+          display: flex;
+          align-items: flex-start;
+        }
+
+        .timeline-icon {
+          position: absolute;
+          left: -40px;
+          top: 5px;
+          width: 30px;
+          height: 30px;
+          background-color: #4a5568;
+          color: white;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 16px;
+        }
+
+        .timeline-content {
+          padding-left: 50px;
+          background-color: #2d3748;
+          color: #cbd5e0;
+          padding: 15px;
+          border-radius: 8px;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+          transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .timeline-content:hover {
+          background-color: #4a5568;
+          transform: translateY(-5px);
+        }
+
+        .timeline-date {
+          font-size: 14px;
+          color: #a0aec0;
+        }
+
+        .timeline-title {
+          font-size: 18px;
+          font-weight: bold;
+          margin-top: 5px;
+        }
+
+        .timeline-location {
+          font-size: 14px;
+          color: #a0aec0;
+          margin-bottom: 10px;
+        }
+
+        .timeline-description {
+          font-size: 14px;
+          color: #e2e8f0;
+        }
+
+        .timeline-event::before {
+          content: '';
+          position: absolute;
+          left: -12px;
+          top: 5px;
+          width: 8px;
+          height: 8px;
+          background-color: #4a5568;
+          border-radius: 50%;
+        }
+
+        .timeline-event:nth-child(even) .timeline-content {
+          background-color: #1a202c;
+          border-radius: 8px;
+          padding: 15px;
+        }
+      `}</style>
+    <div className="timeline-container">
+      {events.map((event, index) => (
+        <div key={index} className="timeline-event">
+          <div className="timeline-icon">{event.icon}</div>
+          <div className="timeline-content">
+            <span className="timeline-date">{event.date}</span>
+            <h3 className="timeline-title">{event.title}</h3>
+            <span className="timeline-location">{event.location}</span>
+            <p className="timeline-description">{event.description}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+    </>
+  );
+};
 
 export const BentoGrid = ({
   className,
@@ -18,9 +147,12 @@ export const BentoGrid = ({
   return (
     <div
       className={cn(
-        "grid md:auto-rows-[12rem] grid-cols-1 md:grid-cols-3 gap-4 max-w-7xl mx-auto ",
+        "grid grid-cols-1 md:grid-cols-3 gap-4 max-w-7xl mx-auto ",
         className
       )}
+      // style={{
+      //   height: "100%",
+      // }}
     >
       {children}
     </div>
@@ -59,9 +191,8 @@ export const BentoGridItem = ({
   return (
     <div
       className={cn(
-        "row-span-1 relative overflow-hidden rounded-3xl group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none flex flex-col items-center justify-center space-y-4 border border-white/[0.1]",
-        className,
-        "h-48"
+        "relative overflow-hidden rounded-3xl group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none flex flex-col items-center justify-center space-y-4 border border-white/[0.1]",
+        className
       )}
       style={{
         background: "rgb(4, 7, 29)",
@@ -186,6 +317,14 @@ export const BentoGridItem = ({
                   {item}
                 </span>
               ))}
+            </div>
+          </div>
+        )}
+
+        {id === 4 && (
+          <div className="flex flex-col gap-3 justify-center">
+            <div className="flex flex-col gap-3">
+              {EducationTimeline()}
             </div>
           </div>
         )}
