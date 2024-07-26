@@ -41,7 +41,7 @@ const EducationTimeline = () => {
         .timeline-container {
           padding: 20px;
           position: relative;
-          margin-left: 20px;
+          margin-left: 135px;
         }
 
         .timeline-event {
