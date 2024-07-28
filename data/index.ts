@@ -85,7 +85,7 @@ export const projects = [
     des: "Explore the wonders of our solar system with this captivating 3D simulation of the planets using Three.js.",
     img: "/p1.svg",
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
-    link: "https://github.com/adrianhajdin?tab=repositories",
+    link: "https://github.com/seogin/ColorUs",
   },
   {
     id: 2,
@@ -93,7 +93,7 @@ export const projects = [
     des: "A web app that displays a comprehensive list of criminals through both map and list views and provides users with protection services including guardian robots, security drones, and cybersecurity packages.",
     img: "/ProtectUs.png",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
-    link: "https://github.com/adrianhajdin/zoom-clone",
+    link: "https://github.com/yeali-kim/2800-202410-DTC07",
   },
   {
     id: 3,
@@ -101,7 +101,7 @@ export const projects = [
     des: "Helps BCIT students to connect anonymously, discuss school life, buy and sell items, access career resources, and engage in general chat.",
     img: "/CampUs.png",
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
-    link: "https://github.com/adrianhajdin/ai_saas_app",
+    link: "https://github.com/seogin/BCIT-Hackathon-2024-Team8",
   },
   {
     id: 4,
@@ -109,7 +109,7 @@ export const projects = [
     des: "Provides real-time information on air pollutant levels and offers personalized recommendations based on the current air quality index for any searched city.",
     img: "/AirHealth.png",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
-    link: "https://github.com/adrianhajdin/iphone",
+    link: "https://github.com/seogin/1800_202410_DTC09",
   },
 ];
 
