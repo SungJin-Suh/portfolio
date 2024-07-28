@@ -90,7 +90,7 @@ export const projects = [
   {
     id: 2,
     title: "ProtectUs",
-    des: "Simplify your video conferencing experience with Yoom. Seamlessly connect with colleagues and friends.",
+    des: "A web app that displays a comprehensive list of criminals through both map and list views and provides users with protection services including guardian robots, security drones, and cybersecurity packages.",
     img: "/ProtectUs.png",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
     link: "https://github.com/adrianhajdin/zoom-clone",
@@ -98,7 +98,7 @@ export const projects = [
   {
     id: 3,
     title: "CampUs",
-    des: "A REAL Software-as-a-Service app with AI features and a payments and credits system using the latest tech stack.",
+    des: "Helps BCIT students to connect anonymously, discuss school life, buy and sell items, access career resources, and engage in general chat.",
     img: "/CampUs.png",
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
     link: "https://github.com/adrianhajdin/ai_saas_app",
@@ -106,7 +106,7 @@ export const projects = [
   {
     id: 4,
     title: "AirHealth",
-    des: "Recreated the Apple iPhone 15 Pro website, combining GSAP animations and Three.js 3D effects..",
+    des: "Provides real-time information on air pollutant levels and offers personalized recommendations based on the current air quality index for any searched city.",
     img: "/AirHealth.png",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
     link: "https://github.com/adrianhajdin/iphone",
