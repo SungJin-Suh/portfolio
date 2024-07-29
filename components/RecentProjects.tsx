@@ -9,7 +9,7 @@ const RecentProjects = () => {
             Recent Projects
         </h1>
         <div className="flex flex-wrap items-center justify-center p-4 gap-16 mt-10">
-            {projects.map(({ id, title, des, img, iconLists, link }) => (
+            {projects.map(({ id, title, des, img, link, technologies }) => (
                 <div key={ id } className="lg:min-h-[32.5rem] h-[25rem] flex items-center justify-center sm:w-96 w-[80vw]">
                     <WobbleCard containerClassName="h-full">
                         <div className="relative flex flex-col items-center justify-center sm:w-96 w-[80vw] overflow-hidden pr-10">
@@ -28,6 +28,16 @@ const RecentProjects = () => {
                                 </a>
                             </div>
                             <p className="text-sm mt-2 pr-4">{ des }</p>
+                            <div className="flex flex-wrap justify-center gap-2 mt-2 pr-4">
+                                { technologies?.map((tech, index) => (
+                                    <span
+                                        key={index}
+                                        className="bg-gray-700 text-white text-xs px-2 py-1 rounded-full"
+                                    >
+                                        {tech}
+                                    </span>
+                                ))}
+                            </div>
                             <div className="relative w-full h-full">
                                 <img 
                                 src={img}

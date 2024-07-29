@@ -94,6 +94,7 @@ export const projects = [
     img: "/ProtectUs.png",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
     link: "https://github.com/yeali-kim/2800-202410-DTC07",
+    technologies: ["EJS", "CSS", "Tailwind CSS", "JavaScript", "Node.js", "Express.js", "MongoDB", "Google Maps API"],
   },
   {
     id: 3,
@@ -102,6 +103,7 @@ export const projects = [
     img: "/CampUs.png",
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
     link: "https://github.com/seogin/BCIT-Hackathon-2024-Team8",
+    technologies: ["HTML", "CSS", "Tailwind CSS", "JavaScript", "Firebase"]
   },
   {
     id: 4,
@@ -110,6 +112,7 @@ export const projects = [
     img: "/AirHealth.png",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
     link: "https://github.com/seogin/1800_202410_DTC09",
+    technologies: ["HTML", "CSS", "Bootstrap", "Tailwind CSS", "JavaScript", "Firebase", "Google Air Quality API"]
   },
 ];
 
