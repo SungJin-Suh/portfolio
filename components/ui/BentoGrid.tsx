@@ -8,7 +8,8 @@ import React from "react";
 import animationData from "@/data/confetti.json";
 import MagicButton from "./MagicButton";
 import { IoCopyOutline } from "react-icons/io5";
-import { FaGraduationCap, FaBriefcase } from 'react-icons/fa';
+import { FaGraduationCap } from 'react-icons/fa';
+import RecentProjects from "../RecentProjects"
 
 const EducationTimeline = () => {
   const events = [
@@ -169,6 +170,7 @@ export const BentoGridItem = ({
   titleClassName,
   spareImg,
   descriptionClassName,
+  children,
 }: {
   className?: string;
   title?: string | React.ReactNode;
@@ -179,6 +181,7 @@ export const BentoGridItem = ({
   titleClassName?: string;
   spareImg?: string;
   descriptionClassName?: string;
+  children?: React.ReactNode;
 }) => {
   const [copied, setCopied] = useState(false);
 
@@ -243,8 +246,7 @@ export const BentoGridItem = ({
         >
           {description}
         </div>
-
-        {/* {id === 2 && <GlobeDemo />} */}
+        {id === 2 && < RecentProjects />}
 
         {id === 3 && (
           <div className="flex flex-wrap gap-1 lg:gap-5 justify-center">
