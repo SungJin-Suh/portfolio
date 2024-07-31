@@ -8,7 +8,7 @@ import React from "react";
 import animationData from "@/data/confetti.json";
 import MagicButton from "./MagicButton";
 import { IoCopyOutline } from "react-icons/io5";
-import { FaGraduationCap } from 'react-icons/fa';
+import { FaGraduationCap, FaBriefcase } from 'react-icons/fa';
 import RecentProjects from "../RecentProjects"
 
 const EducationTimeline = () => {
@@ -33,6 +33,147 @@ const EducationTimeline = () => {
       location: "Vancouver, BC",
       description: "Graduated with a Bachelor's degree in Science with a combined major in chemistry, life science, and mathematics.",
       icon: <FaGraduationCap />,
+    },
+  ];
+
+  return (
+    <>
+      <style jsx>{`
+        .timeline-container {
+          padding: 20px;
+          position: relative;
+          margin-left: 135px;
+        }
+
+        .timeline-event {
+          position: relative;
+          margin-bottom: 20px;
+          display: flex;
+          align-items: flex-start;
+        }
+
+        .timeline-icon {
+          position: absolute;
+          left: -40px;
+          top: 5px;
+          width: 30px;
+          height: 30px;
+          background-color: #4a5568;
+          color: white;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 16px;
+        }
+
+        .timeline-content {
+          padding-left: 50px;
+          background-color: #2d3748;
+          color: #cbd5e0;
+          padding: 15px;
+          border-radius: 8px;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+          transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .timeline-content:hover {
+          background-color: #4a5568;
+          transform: translateY(-5px);
+        }
+
+        .timeline-date {
+          font-size: 14px;
+          color: #a0aec0;
+        }
+
+        .timeline-title {
+          font-size: 18px;
+          font-weight: bold;
+          margin-top: 5px;
+        }
+
+        .timeline-location {
+          font-size: 14px;
+          color: #a0aec0;
+          margin-bottom: 10px;
+        }
+
+        .timeline-description {
+          font-size: 14px;
+          color: #e2e8f0;
+        }
+
+        .timeline-event::before {
+          content: '';
+          position: absolute;
+          left: -12px;
+          top: 5px;
+          width: 8px;
+          height: 8px;
+          background-color: #4a5568;
+          border-radius: 50%;
+        }
+
+        .timeline-event:nth-child(even) .timeline-content {
+          background-color: #1a202c;
+          border-radius: 8px;
+          padding: 15px;
+        }
+      `}</style>
+    <div className="timeline-container">
+      {events.map((event, index) => (
+        <div key={index} className="timeline-event">
+          <div className="timeline-icon">{event.icon}</div>
+          <div className="timeline-content">
+            <span className="timeline-date">{event.date}</span>
+            <h3 className="timeline-title">{event.title}</h3>
+            <span className="timeline-location">{event.location}</span>
+            <p className="timeline-description">{event.description}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+    </>
+  );
+};
+
+const WorkExperience = () => {
+  const events = [
+    {
+      date: "Nov 2020 - Dec 2023",
+      title: "Teacher On Call",
+      location: "Richmond School District (RSD)",
+      description: "Followed established lesson plans provided by teachers to maintain curricular pacing and meet learning objects efficiently. Also, consistently communicated with teachers who were unable to attend, ensuring seamless continuation of classroom activities.",
+      icon: <FaBriefcase />,
+    },
+    {
+      date: "Feb 2020 - May 2020",
+      title: "Student Teacher",
+      location: "Templeton Secondary School",
+      description: "Prepared lesson plans with the advice of a school advisor (SA) and a faculty advisor (FA), aligning them woth the British Columbia math curriculum for a duration of ten weeks.",
+      icon: <FaBriefcase />,
+    },
+    {
+      date: "Oct 2018 - Aug 2020",
+      title: "Math & Chemistry Instructor",
+      location: "Elite Educational Institute",
+      description: "Prepared comprehensive teaching materials and guided students through problem-solving with detailed instructions.",
+      icon: <FaBriefcase />,
+    },
+    {
+      date: "Mar - Sep 2018",
+      title: "Math Tutor",
+      location: "Global Give Society",
+      description: "Volunteered to teach pre-calculus 11 and 12 to students, and offered additional online support during summer school.",
+      icon: <FaBriefcase />,
+    },
+    {
+      date: "Dec 2017 - Feb 2018",
+      title: "Math Instructor",
+      location: "Kumon Math & Reading Centre",
+      description: "Consistently adhered to grading schemes and provided clear, simple feedback to students.",
+      icon: <FaBriefcase />,
     },
   ];
 
@@ -327,6 +468,14 @@ export const BentoGridItem = ({
           <div className="flex flex-col gap-3 justify-center">
             <div className="flex flex-col gap-3">
               {EducationTimeline()}
+            </div>
+          </div>
+        )}
+
+        {id === 5 && (
+          <div className="flex flex-col gap-3 justify-center">
+            <div className="flex flex-col gap-3">
+              {WorkExperience()}
             </div>
           </div>
         )}
