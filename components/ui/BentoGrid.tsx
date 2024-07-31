@@ -121,7 +121,7 @@ const EducationTimeline = () => {
           padding: 15px;
         }
       `}</style>
-    <div className="timeline-container">
+    <div className="timeline-container" id="education">
       {events.map((event, index) => (
         <div key={index} className="timeline-event">
           <div className="timeline-icon">{event.icon}</div>
@@ -262,7 +262,7 @@ const WorkExperience = () => {
           padding: 15px;
         }
       `}</style>
-    <div className="timeline-container">
+    <div className="timeline-container" id="experience">
       {events.map((event, index) => (
         <div key={index} className="timeline-event">
           <div className="timeline-icon">{event.icon}</div>
@@ -390,7 +390,7 @@ export const BentoGridItem = ({
         {id === 2 && < RecentProjects />}
 
         {id === 3 && (
-          <div className="flex flex-wrap gap-1 lg:gap-5 justify-center">
+          <div className="flex flex-wrap gap-1 lg:gap-5 justify-center" id="skills">
             <div className="flex flex-col gap-3 lg:gap-8">
               {["Python", "Java", "C", "JavaScript"].map((item) => (
                 <span
