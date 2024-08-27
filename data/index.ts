@@ -82,10 +82,11 @@ export const projects = [
   {
     id: 1,
     title: "ColorUs",
-    des: "Explore the wonders of our solar system with this captivating 3D simulation of the planets using Three.js.",
-    img: "/p1.svg",
+    des: "A personal color analysis app that uses advanced machine learning algorithms to recommend the best complementary colors for you based on your unique skin tone.",
+    img: "/ColorUs1.png",
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
     link: "https://github.com/seogin/ColorUs",
+    technologies: ["Python", "CSS", "Tailwind CSS", "React", "dlib", "OpenCV", "Flask", "SciKit-Learn", "Pandas", "Numpy", "Selenmium", "Google Images Download"],
   },
   {
     id: 2,
