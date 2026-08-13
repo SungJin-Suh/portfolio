@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import Spotlight from "@/components/Spotlight";
 import "./globals.css";
 
 const inter = Inter({
@@ -15,7 +16,10 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" className={`${inter.variable} scroll-smooth`}>
-      <body className="bg-navy font-sans text-body antialiased">{children}</body>
+      <body className="bg-navy font-sans text-body antialiased">
+        <Spotlight/>
+        {children}
+      </body>
     </html>
   );
 }
