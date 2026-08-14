@@ -1,4 +1,5 @@
 import { profile } from "@/content/profile";
+import Nav from "@/components/Nav";
 import Socials from "@/components/Socials";
 import ArrowIcon from "@/components/ArrowIcon";
 import About from "@/components/About";
@@ -25,20 +26,7 @@ export default function Home() {
               {profile.status}
             </p>
 
-            <nav className="hidden lg:block" aria-label="In-page jump links">
-              <ul className="mt-16 w-max">
-                {["about", "experience", "projects"].map((id) => (
-                  <li key={id}>
-                    <a className="group flex items-center py-3" href={`#${id}`}>
-                      <span className="mr-4 h-px w-8 bg-muted transition-all group-hover:w-16 group-hover:bg-bright" />
-                      <span className="text-xs font-bold uppercase tracking-widest text-muted group-hover:text-bright">
-                        {id}
-                      </span>
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </nav>
+            <Nav />
           </div>
 
           <Socials />
