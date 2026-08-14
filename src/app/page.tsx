@@ -1,6 +1,7 @@
 import { profile } from "@/content/profile";
 import Socials from "@/components/Socials";
 import ArrowIcon from "@/components/ArrowIcon";
+import About from "@/components/About";
 import Experience from "@/components/Experience";
 import Projects from "@/components/Projects";
 
@@ -49,7 +50,7 @@ export default function Home() {
             <h2 className="mb-4 text-sm font-bold uppercase tracking-widest text-bright lg:sr-only">
               About
             </h2>
-            <p className="mb-4">ABOUT</p>
+            <About />
           </section>
 
                     <section id="experience" className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36">
