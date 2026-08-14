@@ -1,4 +1,6 @@
 import Socials from "@/components/Socials";
+import ArrowIcon from "@/components/ArrowIcon";
+import Experience from "@/components/Experience";
 
 export default function Home() {
   return (
@@ -45,11 +47,28 @@ export default function Home() {
             <p className="mb-4">ABOUT</p>
           </section>
 
-          <section id="experience" className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36">
+                    <section id="experience" className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36">
             <h2 className="mb-4 text-sm font-bold uppercase tracking-widest text-bright lg:sr-only">
               Experience
             </h2>
-            <p>Experience cards go here</p>
+            <Experience />
+            <div className="mt-12">
+              <a
+                className="group/link inline-flex items-baseline text-base font-semibold leading-tight text-bright"
+                href="/resume.pdf"
+                target="_blank"
+                rel="noreferrer noopener"
+                aria-label="View Full Résumé (opens in a new tab)"
+              >
+                <span>
+                  View Full{" "}
+                  <span className="inline-block">
+                    Résumé
+                    <ArrowIcon />
+                  </span>
+                </span>
+              </a>
+            </div>
           </section>
 
           <section id="projects" className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36">
