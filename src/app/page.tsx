@@ -1,3 +1,4 @@
+import { profile } from "@/content/profile";
 import Socials from "@/components/Socials";
 import ArrowIcon from "@/components/ArrowIcon";
 import Experience from "@/components/Experience";
@@ -11,13 +12,16 @@ export default function Home() {
         <header className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24">
           <div>
             <h1 className="text-4xl font-bold tracking-tight text-bright sm:text-5xl">
-              David Suh
+              {profile.name}
             </h1>
             <h2 className="mt-3 text-lg font-medium tracking-tight text-bright sm:text-xl">
-              Software Developer
+              {profile.title}
             </h2>
             <p className="mt-4 max-w-xs leading-normal text-muted">
-              One-line tagline goes here.
+              {profile.tagline}
+            </p>
+            <p className="mt-6 text-sm text-muted/80">
+              {profile.status}
             </p>
 
             <nav className="hidden lg:block" aria-label="In-page jump links">
