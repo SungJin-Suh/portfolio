@@ -1,6 +1,7 @@
 import Socials from "@/components/Socials";
 import ArrowIcon from "@/components/ArrowIcon";
 import Experience from "@/components/Experience";
+import Projects from "@/components/Projects";
 
 export default function Home() {
   return (
@@ -75,7 +76,7 @@ export default function Home() {
             <h2 className="mb-4 text-sm font-bold uppercase tracking-widest text-bright lg:sr-only">
               Projects
             </h2>
-            <p>Project cards go here</p>
+            <Projects />
           </section>
         </main>
       </div>
