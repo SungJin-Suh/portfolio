@@ -1,3 +1,5 @@
+import Socials from "@/components/Socials";
+
 export default function Home() {
   return (
     <div className="mx-auto min-h-screen max-w-7xl px-6 py-12 md:px-12 md:py-20 lg:px-24 lg:py-0">
@@ -31,9 +33,7 @@ export default function Home() {
             </nav>
           </div>
 
-          <ul className="mt-8 flex items-center gap-5" aria-label="Social media">
-            <li className="text-xs text-muted">Social icons go here</li>
-          </ul>
+          <Socials />
         </header>
 
         {/* ── Right: scrolling content ── */}
@@ -42,8 +42,7 @@ export default function Home() {
             <h2 className="mb-4 text-sm font-bold uppercase tracking-widest text-bright lg:sr-only">
               About
             </h2>
-            <p className="mb-4">First paragraph of the intro.</p>
-            <p className="mb-4">Second paragraph.</p>
+            <p className="mb-4">ABOUT</p>
           </section>
 
           <section id="experience" className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36">
