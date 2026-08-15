@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { Analytics } from "@vercel/analytics/react";
 import Spotlight from "@/components/Spotlight";
 import "./globals.css";
 
@@ -32,6 +33,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <body className="bg-navy font-sans text-body antialiased">
         <Spotlight />
         {children}
+        <Analytics />
       </body>
     </html>
   );
