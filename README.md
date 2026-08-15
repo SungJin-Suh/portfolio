@@ -1,36 +1,70 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# David's Personal Portfolio Project
 
-## Getting Started
+My personal portfolio — a single-page site built with Next.js, TypeScript, and Tailwind CSS.
 
-First, run the development server:
+**Live:** https://david-suh.vercel.app
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+![Portfolio preview](https://david-suh.vercel.app/opengraph-image)
+
+## Tech Stack
+
+| | |
+|---|---|
+| Framework | Next.js 16 (App Router) |
+| Language | TypeScript |
+| Styling | Tailwind CSS v4 (CSS-first `@theme`) |
+| Font | Inter via `next/font` |
+| Hosting | Vercel |
+
+No UI library, no icon package, no animation library — everything is hand-built.
+
+## Implementation Notes
+
+**Cursor spotlight** — A fixed radial-gradient overlay follows the cursor. Position
+updates are written straight to CSS custom properties through a ref and batched with
+`requestAnimationFrame`, so moving the mouse never triggers a React re-render. The
+gradient is layered with a tiled SVG noise texture at 3.5% opacity to dither out the
+banding that low-contrast gradients produce on 8-bit displays.
+
+**Scroll-linked navigation** — An `IntersectionObserver` with a `-45%` root margin
+creates a thin detection band across the viewport center, so exactly one section is
+active at a time. No scroll listeners, no layout thrashing.
+
+**Hover isolation** — Hovering one entry in the experience or project list dims its
+siblings, using named Tailwind groups (`group/list`) so nested hover states don't
+collide. Gated behind `lg:` since touch devices have no hover.
+
+**Content separation** — All copy lives in `src/content/*.ts`, apart from the
+components that render it. Adding a second language later means adding data files,
+not rewriting JSX.
+
+**Social preview** — The Open Graph card is generated at build time from JSX with
+`ImageResponse`, so it stays in sync with the site's design tokens instead of being
+a static image someone has to remember to update.
+
+## Structure
+
+```
+src/
+├── app/
+│   ├── layout.tsx            root layout, metadata, fonts
+│   ├── page.tsx              two-column sticky layout
+│   ├── globals.css           Tailwind theme tokens
+│   └── opengraph-image.tsx   generated social card
+├── components/               Nav, Spotlight, Experience, Projects, About, Socials
+└── content/                  profile, experience, projects data
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Running Locally
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm install
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Open http://localhost:3000.
 
-## Learn More
+## History
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This is the second version. The original 2024 site is preserved at the
+[`v1-archive`](https://github.com/SungJin-Suh/portfolio/tree/v1-archive) tag.
