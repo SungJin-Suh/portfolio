@@ -8,16 +8,29 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
+const title = "David Suh | Software Developer";
+const description =
+  "Software developer based in Vancouver, BC. Former math teacher building web and mobile apps that make complicated things feel simple.";
+
 export const metadata: Metadata = {
-  title: "David Suh | Software Developer",
-  description: "Software developer based in Vancvouer, BC.",
+  metadataBase: new URL("https://david-suh.vercel.app"),
+  title,
+  description,
+  openGraph: {
+    title,
+    description,
+    url: "/",
+    siteName: "David Suh",
+    locale: "en_CA",
+    type: "website",
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" className={`${inter.variable} scroll-smooth`}>
       <body className="bg-navy font-sans text-body antialiased">
-        <Spotlight/>
+        <Spotlight />
         {children}
       </body>
     </html>
