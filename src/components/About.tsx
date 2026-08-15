@@ -28,9 +28,9 @@ export default function About() {
         <InlineLink href="https://www.bcit.ca/">BCIT</InlineLink>&apos;s Computer
         Systems Technology program, taking the Predictive Analytics option. My
         final project was{" "}
-        <InlineLink href="https://github.com/SungJin-Suh/DineGuide">
+        <span className="font-medium text-bright">
           DineGuide
-        </InlineLink>
+        </span>
         , a cross-platform Flutter app that helps people with Type 1 diabetes
         find restaurants and menu items matching their nutritional needs. 
         I built the full authentication and profile suite - sign-up, 2FA, password recovery - and

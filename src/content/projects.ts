@@ -2,7 +2,8 @@ export type Project = {
   title: string;
   kind: string;
   period: string;
-  url: string;
+  url?: string;
+  note?: string;
   image: string;
   description: string;
   skills: string[];
@@ -13,7 +14,7 @@ export const projects: Project[] = [
     title: "DineGuide",
     kind: "Industry-Sponsored",
     period: "Jan — May 2026",
-    url: "https://github.com/SungJin-Suh/DineGuide",
+    note: "Private repository - available on request",
     image: "/DineGuide.png",
     description:
       "Cross-platform mobile app that helps people with Type 1 diabetes find restaurants and menu items matching their nutritional needs, built over five months with an industry sponsor.",

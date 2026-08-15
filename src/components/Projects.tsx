@@ -20,25 +20,35 @@ export default function Projects() {
             />
 
             <div className="z-10 sm:order-2 sm:col-span-6">
-              <h3>
-                <a
-                  className="group/link inline-flex items-baseline text-base font-medium leading-tight text-bright hover:text-accent focus-visible:text-accent"
-                  href={project.url}
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  aria-label={`${project.title} (opens in a new tab)`}
-                >
-                  <span className="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block" />
-                  <span className="inline-block">
+                            <h3>
+                {project.url ? (
+                  <a
+                    className="group/link inline-flex items-baseline text-base font-medium leading-tight text-bright hover:text-accent focus-visible:text-accent"
+                    href={project.url}
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    aria-label={`${project.title} (opens in a new tab)`}
+                  >
+                    <span className="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block" />
+                    <span className="inline-block">
+                      {project.title}
+                      <ArrowIcon />
+                    </span>
+                  </a>
+                ) : (
+                  <span className="text-base font-medium leading-tight text-bright">
                     {project.title}
-                    <ArrowIcon />
                   </span>
-                </a>
+                )}
               </h3>
 
               <p className="mt-1 text-xs font-semibold uppercase tracking-wide text-muted">
                 {project.kind} · {project.period}
               </p>
+
+              {project.note && (
+                <p className="mt-1 text-xs italic text-muted/70">{project.note}</p>
+              )}
 
               <p className="mt-2 text-sm leading-normal">{project.description}</p>
 
